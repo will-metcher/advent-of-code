@@ -1,8 +1,6 @@
-import math
+import math, utils
 
-f = open("input.txt")
-partitions = f.readlines()
-f.close()
+partitions = utils.read_file("day05", "lines")
 
 def find_row(partition):
     row_f = 0

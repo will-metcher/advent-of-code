@@ -1,6 +1,6 @@
-f = open("input.txt","r")
-lines = f.readlines()
-f.close()
+import utils
+
+lines = utils.read_file("day03", "lines")
 
 
 def slopes(dx, dy):

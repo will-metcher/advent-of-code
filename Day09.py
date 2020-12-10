@@ -1,8 +1,8 @@
+import utils
+
 length = 25
 
-f = open("input.txt", "r")
-nums = list(map(int, f.read().split("\n")))
-f.close()
+nums = list(map(int, utils.read_file("day09").split("\n")))
 
 
 def is_sum_in_list(num, lst):

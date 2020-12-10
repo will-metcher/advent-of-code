@@ -1,7 +1,6 @@
-f = open("input.txt")
-rules = f.readlines()
-f.close()
+import utils
 
+rules = utils.read_file("day07", "lines")
 
 result = []
 

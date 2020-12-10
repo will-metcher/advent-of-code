@@ -1,11 +1,8 @@
-import time
+import time, utils
 
 start = time.time()
 
-f = open("input.txt", 'r')
-entries = f.read().split("\n")
-f.close()
-
+entries = utils.read_file("day01").split("\n")
 
 def find_sum_1():
     for i, e1 in enumerate(entries):

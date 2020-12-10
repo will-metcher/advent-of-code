@@ -1,7 +1,6 @@
-f = open("input.txt", "r")
-instructions = f.readlines()
-f.close()
+import utils
 
+instructions = utils.read_file("day08", "lines")
 
 def accumulator():
     accumulator = 0

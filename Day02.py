@@ -1,6 +1,6 @@
-f = open("input.txt", 'r')
-database = f.readlines()
-f.close()
+import utils
+
+database = utils.read_file("day02", "lines")
 
 def valid_passwords_1():
     total = 0

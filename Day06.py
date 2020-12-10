@@ -1,6 +1,6 @@
-f = open("input.txt", "r")
-answers = f.read().split("\n\n")
-f.close()
+import utils
+
+answers = utils.read_file("day06").split("\n\n")
 
 def sum_of_any_response():
     total = 0

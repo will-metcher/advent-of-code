@@ -1,6 +1,6 @@
-f = open("input.txt", "r")
-batch = f.read().split("\n\n")
-f.close()
+import utils
+
+batch = utils.read_file("day04").split("\n\n")
 
 required_fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
 valid_height_units = ["cm", "in"]
