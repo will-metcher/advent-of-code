@@ -42,13 +42,13 @@ def find_shortest_intersection_steps():
     shortest = math.inf
     for i in intersections:
         w1_steps, w2_steps = 1, 1
-        for a in range(len(x)):
-            if x[a] == i:
+        for a in range(len(x_path)):
+            if x_path[a] == i:
                 break
             w1_steps += 1
 
-        for b in range(len(y)):
-            if y[b] == i:
+        for b in range(len(y_path)):
+            if y_path[b] == i:
                 break
             w2_steps += 1
 
@@ -64,7 +64,7 @@ dirs = dirs.split("\n")
 w1 = dirs[0].split(",")
 w2 = dirs[1].split(",")
 
-x = trace_path(w1)
-y = trace_path(w2)
-intersections = find_intersections(x, y)
+x_path = trace_path(w1)
+y_path = trace_path(w2)
+intersections = find_intersections(x_path, y_path)
 print(find_shortest_intersection_steps())

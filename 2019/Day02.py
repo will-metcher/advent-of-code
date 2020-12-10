@@ -3,7 +3,7 @@ import utils
 opcodes = utils.read_file("day02").split(",")
 
 ints = list(map(int, opcodes))
-print(ints)
+
 
 def intcode(lst, noun, verb):
     lst[1] = noun
