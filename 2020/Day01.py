@@ -4,6 +4,7 @@ start = time.time()
 
 entries = utils.read_file("day01").split("\n")
 
+
 def find_sum_1():
     for i, e1 in enumerate(entries):
         for e2, j in enumerate(entries):
@@ -13,6 +14,7 @@ def find_sum_1():
             if int(e1) + int(e2) == 2020:
                 return int(e1) * int(e2)
     return 0
+
 
 def find_sum_2():
     for i, e1 in enumerate(entries):
@@ -26,7 +28,5 @@ def find_sum_2():
                     return int(e1) * int(e2) * int(e3)
     return 0
 
-print(find_sum_2(),"in",time.time()-start)
-            
 
-            
+print(find_sum_2(), "in", time.time() - start)
