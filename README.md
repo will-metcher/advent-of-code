@@ -1,2 +1,2 @@
-# advent-of-code-2020
-My solutions for <a href="https://adventofcode.com/2020">Advent of Code 2020</a>. Written in Python.
+# Advent of Code
+My solutions for <a href="https://adventofcode.com">Advent of Code</a> 2019 & 2020. Written in Python.
