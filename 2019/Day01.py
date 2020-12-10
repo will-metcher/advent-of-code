@@ -1,11 +1,12 @@
 import math
+import utils
 
-f = open("input.txt", "r")
-masses = f.readlines()
-f.close()
+masses = utils.read_file("day01", "lines")
+
 
 def calc_fuel(mass):
     return math.floor(mass / 3) - 2
+
 
 def sum_fuel():
     total = 0
@@ -14,9 +15,9 @@ def sum_fuel():
 
     return total
 
+
 def sum_fuel_2():
     cum_total = 0
-    total = 0
     for mass in masses:
         total = int(mass)
         while total > 0:
@@ -24,5 +25,6 @@ def sum_fuel_2():
             if total > 0:
                 cum_total += total
     return cum_total
+
 
 print(sum_fuel_2())

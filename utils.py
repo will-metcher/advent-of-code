@@ -1,5 +1,5 @@
-def read_file(name, read_type = ""):
-    f = open("inputs/"+name+".txt", 'r')
+def read_file(name, read_type=""):
+    f = open("inputs/" + name + ".txt", 'r')
     if read_type == "lines":
         lines = f.readlines()
     else:

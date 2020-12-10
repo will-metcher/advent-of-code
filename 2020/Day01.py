@@ -1,4 +1,5 @@
-import time, utils
+import time
+import utils
 
 start = time.time()
 
