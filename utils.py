@@ -6,3 +6,7 @@ def read_file(name, read_type=""):
         lines = f.read()
     f.close()
     return lines
+
+
+def manhatten_distance(x1, y1, x2, y2):
+    return abs(x2 - x1) + abs(y2 - y1)

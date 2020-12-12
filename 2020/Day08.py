@@ -2,6 +2,7 @@ import utils
 
 instructions = utils.read_file("day08", "lines")
 
+
 def accumulator():
     accumulator = 0
     visited_indexes = []
@@ -21,6 +22,7 @@ def accumulator():
 
     return accumulator
 
+
 def accumulator_corrupted():
     for j, ins in enumerate(instructions):
         accumulator = 0
@@ -32,10 +34,10 @@ def accumulator_corrupted():
         old_command = instructions[j]
 
         if "nop" in ins:
-            new_command = instructions[j].replace("nop","jmp")
+            new_command = instructions[j].replace("nop", "jmp")
         else:
-            new_command = instructions[j].replace("jmp","nop")
-            
+            new_command = instructions[j].replace("jmp", "nop")
+
         instructions[j] = new_command
         i = 0
         while i not in visited_indexes:
@@ -56,8 +58,8 @@ def accumulator_corrupted():
             i += 1
 
         instructions[j] = old_command
-    
 
     return -1
+
 
 print(accumulator_corrupted())

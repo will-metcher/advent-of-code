@@ -6,6 +6,7 @@ required_fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
 valid_height_units = ["cm", "in"]
 valid_eye_colors = ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]
 
+
 def required_fields_passports():
     count = 0
     for i in batch:
@@ -13,11 +14,13 @@ def required_fields_passports():
             count += 1
     return count
 
+
 def has_all_fields(doc):
     for f in required_fields:
         if f not in doc:
             return False
     return True
+
 
 def valid_data(doc):
     fields = dict(i.split(":") for i in doc.split(" "))
@@ -43,9 +46,9 @@ def valid_data(doc):
         return False
     if len(fields["pid"]) != 9 or not fields["pid"].isnumeric():
         return False
-    
+
     return True
-    
+
 
 def valid_passports():
     count = 0
@@ -53,5 +56,6 @@ def valid_passports():
         if has_all_fields(i) and valid_data(i.replace("\n", " ")):
             count += 1
     return count
-        
+
+
 print(valid_passports())

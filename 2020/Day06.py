@@ -2,6 +2,7 @@ import utils
 
 answers = utils.read_file("day06").split("\n\n")
 
+
 def sum_of_any_response():
     total = 0
     for ans in answers:
@@ -11,6 +12,7 @@ def sum_of_any_response():
                 unique.add(a)
         total += len(unique)
     return total
+
 
 def sum_of_every_response():
     total = 0
@@ -22,8 +24,6 @@ def sum_of_every_response():
             if person.count(ans) == len_person:
                 total += 1
     return total
-            
+
 
 print(sum_of_every_response())
-        
-        

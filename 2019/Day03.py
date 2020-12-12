@@ -2,10 +2,6 @@ import math
 import utils
 
 
-def calc_taxicab_distance(x1, y1, x2, y2):
-    return abs(x2 - x1) + abs(y2 - y1)
-
-
 def trace_path(path):
     trace = []
     x, y = 0, 0
@@ -32,7 +28,7 @@ def find_intersections(x, y):
 def find_shortest_intersection():
     smallest = math.inf
     for i in intersections:
-        dist = calc_taxicab_distance(0, 0, i[0], i[1])
+        dist = utils.manhatten_distance(0, 0, i[0], i[1])
         if dist < smallest:
             smallest = dist
     return smallest
