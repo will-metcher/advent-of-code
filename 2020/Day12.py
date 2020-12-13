@@ -44,7 +44,7 @@ class Waypoint(Object):
         self.x = 10
         self.y = -1
 
-    def rotate(self, direction, amount, ship):
+    def rotate(self, direction, amount):
         turns = int(amount / 90)
         for i in range(turns):
             temp = self.x
