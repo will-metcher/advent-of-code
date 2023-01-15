@@ -7,6 +7,10 @@ def read_file(name, read_type=""):
     f.close()
     return lines
 
+def load_input(name):
+    with open('inputs/'+name+".txt") as f:
+        return [i for i in f.read().strip().split('\n')]
+
 
 def manhatten_distance(x1, y1, x2, y2):
     return abs(x2 - x1) + abs(y2 - y1)
